@@ -1,0 +1,29 @@
+/* colors.css */
+/* PebbleNote – Calming, Minimalist Color Scheme */
+
+:root {
+    /* Base Colors */
+    --color-primary: #d1d5db; /* Pebble gray */
+    --color-secondary: #a7c4a0; /* Muted sage green */
+    --color-bg: #f9fafb; /* App background (off-white) */
+    --color-surface: #f3f4f6; /* Panels, cards */
+
+    /* Text Colors */
+    --color-text: #2e2e2e; /* Primary text (charcoal) */
+    --color-text-muted: #6b7280; /* Muted/secondary text */
+
+    /* Accent */
+    --color-highlight: #f6d6c9; /* Optional highlight / CTA / focus */
+
+    /* Optional States */
+    --color-border: #e5e7eb; /* Light border */
+    --color-shadow: rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+}
+
+/* Nunito
+
+Quicksand
+
+Poppins (Rounded)
+
+Cabin Sketch */

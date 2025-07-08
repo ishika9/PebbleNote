@@ -1,0 +1,8 @@
+.Appbar {
+    background-color: var(--color-secondary) !important;
+}
+
+.Typography {
+    font-family: "Quicksand", sans-serif !important;
+    color: var(--color-bg) !important;
+}

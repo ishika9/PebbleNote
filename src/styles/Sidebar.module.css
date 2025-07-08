@@ -1,0 +1,58 @@
+.sidebar {
+    height: 100vh;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border-right: 1px solid var(--color-border);
+    box-shadow: 2px 0 5px var(--color-shadow);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 48px; /* leave space for fixed navbar */
+}
+
+.sidebarExpanded {
+    width: 200px;
+}
+
+.sidebarCollapsed {
+    width: 72px;
+}
+
+.list {
+    margin-top: 1rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.listItem:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.listItemIcon {
+    min-width: 0;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItemText {
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.collapsed .listItemText {
+    display: none;
+}
