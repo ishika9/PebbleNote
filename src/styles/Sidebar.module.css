@@ -1,16 +1,16 @@
 .sidebar {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--color-surface);
-    color: var(--color-text);
+    /* color: var(--color-text); */
     border-right: 1px solid var(--color-border);
     box-shadow: 2px 0 5px var(--color-shadow);
     transition: width 0.3s ease;
-    overflow: hidden;
+    /* overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    padding-top: 48px; /* leave space for fixed navbar */
+    padding-top: 48px; leave space for fixed navbar */
 }
 
 .sidebarExpanded {
@@ -26,31 +26,34 @@
 }
 
 .listItem {
-    display: flex;
+    /* display: flex;
     align-items: center;
     padding: 12px 16px;
     cursor: pointer;
     color: var(--color-text-muted);
-    transition: background 0.2s ease;
-    text-decoration: none;
+    transition: background 0.2s ease; */
+    text-decoration: none !important;
 }
 
 .listItem:hover {
-    background-color: var(--color-primary);
-    color: var(--color-text);
+    background-color: pink !important;
+    /* color: var(--color-text); */
 }
 
 .listItemIcon {
-    min-width: 0;
-    margin-right: 16px;
-    display: flex;
+    /* min-width: 0; */
+    margin-right: 16px !important;
+    color: var(--color-text) !important;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .listItemText {
-    white-space: nowrap;
-    font-size: 0.95rem;
+    /* white-space: nowrap; */
+    /* font-size: 0.95rem; */
+    font-family: "Quicksand", sans-serif !important;
+    color: var(--color-text) !important;
 }
 
 .collapsed .listItemText {

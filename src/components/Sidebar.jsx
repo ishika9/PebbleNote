@@ -11,11 +11,11 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import StarIcon from "@mui/icons-material/Star";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
-// import classes from "../styles/Sidebar.module.css";
+import classes from "../styles/Sidebar.module.css";
 import clsx from "clsx";
 
-const drawerWidthExpanded = 200;
-const drawerWidthCollapsed = 72;
+// const drawerWidthExpanded = 200;
+// const drawerWidthCollapsed = 72;
 
 const items = [
     { text: "Home", icon: <HomeIcon />, path: "/" },
@@ -26,32 +26,34 @@ const items = [
 export default function Sidebar({ open }) {
     return (
         <Drawer
+            id="Drawer"
             variant="permanent"
-            // className={clsx(
-            //     classes.sidebar,
-            //     open ? classes.sidebarExpanded : classes.sidebarCollapsed
-            // )}
+            className={clsx(
+                classes.sidebar,
+                open ? classes.sidebarExpanded : classes.sidebarCollapsed
+            )}
             sx={{
-                width: open ? drawerWidthExpanded : drawerWidthCollapsed,
+                // width: open ? drawerWidthExpanded : drawerWidthCollapsed,
                 flexShrink: 0,
                 "& .MuiDrawer-paper": {
-                    width: open ? drawerWidthExpanded : drawerWidthCollapsed,
+                    // width: open ? drawerWidthExpanded : drawerWidthCollapsed,
                     boxSizing: "border-box",
                     transition: "width 0.3s",
                     overflowX: "hidden",
-                    // borderRight: "none",
+                    borderRight: "none",
                 },
             }}
         >
             <Box
-                sx={{ overflow: "auto", mt: 12, ml: 1 }}
+                sx={{ overflow: "auto", mt: 12 }}
                 // className={classes.list}
             >
                 <List>
                     {items.map(({ text, icon, path }) => (
                         <Link
                             to={path}
-                            // className={classes.listItem}
+                            className={classes.listItem}
+                            id={`link#${text}`}
                         >
                             <ListItem
                                 key={text}
@@ -73,17 +75,24 @@ export default function Sidebar({ open }) {
                                             mr: open ? 3 : "auto",
                                             justifyContent: "center",
                                         }}
-                                        // className={classes.listItemIcon}
+                                        className={classes.listItemIcon}
                                     >
                                         {icon}
                                     </ListItemIcon>
                                     {open && (
                                         <ListItemText
-                                            // className={clsx(
-                                            //     classes.listItemText,
-                                            //     !open && "collapsed"
-                                            // )}
+                                            className={clsx(
+                                                classes.listItemText,
+                                                !open && "collapsed"
+                                            )}
                                             primary={text}
+                                            primaryTypographyProps={{
+                                                component: "span",
+                                                style: {
+                                                    fontFamily:
+                                                        '"Quicksand", sans-serif',
+                                                },
+                                            }}
                                         />
                                     )}
                                 </ListItemButton>
