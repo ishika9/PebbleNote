@@ -164,7 +164,7 @@ export const Home = () => {
                                     }}
                                     disabled={state.text.length == 0}
                                 >
-                                    +
+                                    ✔
                                 </button>
                             </div>
                         </div>

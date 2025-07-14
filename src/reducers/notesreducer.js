@@ -55,6 +55,30 @@ export const notesreducer = (state, action) => {
                 ),
             };
         }
+        case "ARCHIVE": {
+            return {
+                ...state,
+                archive: [
+                    ...state.archive,
+                    state.notes.find((note) => note.id === action.payload.id),
+                ],
+                notes: state.notes.filter(
+                    (note) => note.id != action.payload.id
+                ),
+            };
+        }
+        case "REMOVE_FROM_ARCHIVE": {
+            return {
+                ...state,
+                notes: [
+                    ...state.notes,
+                    state.archive.find(({ id }) => id === action.payload.id),
+                ],
+                archive: state.archive.filter(
+                    ({ id }) => id !== action.payload.id
+                ),
+            };
+        }
         default:
             return state;
     }

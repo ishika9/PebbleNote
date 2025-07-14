@@ -8,6 +8,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import ArchiveIcon from "@mui/icons-material/Archive";
+import TrashIcon from "@mui/icons-material/Delete";
 import StarIcon from "@mui/icons-material/Star";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
@@ -21,6 +22,7 @@ const items = [
     { text: "Home", icon: <HomeIcon />, path: "/" },
     { text: "Archive", icon: <ArchiveIcon />, path: "/archive" },
     { text: "Important", icon: <StarIcon />, path: "/important" },
+    { text: "Bin", icon: <TrashIcon />, path: "/bin" },
 ];
 
 export default function Sidebar({ open }) {

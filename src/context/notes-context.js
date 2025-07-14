@@ -8,6 +8,7 @@ const NotesProvider = ({ children }) => {
         title: "",
         text: "",
         notes: [],
+        archive: [],
     };
 
     const [state, dispatch] = useReducer(notesreducer, initialState);
