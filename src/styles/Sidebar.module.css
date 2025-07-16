@@ -42,7 +42,6 @@
 
 .listItemIcon {
     /* min-width: 0; */
-    margin-right: 16px !important;
     color: var(--color-text) !important;
     /* display: flex;
     justify-content: center;

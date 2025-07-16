@@ -169,27 +169,31 @@ export const Home = () => {
                             </div>
                         </div>
                         {pinnedNotes.length > 0 && <h3>Pinned Notes</h3>}
-                        {pinnedNotes.length > 0 &&
-                            pinnedNotes.map((note) => (
-                                <NotesCard
-                                    key={note.id}
-                                    id={note.id}
-                                    title={note.title}
-                                    text={note.text}
-                                    isPinned={note.isPinned}
-                                />
-                            ))}
-                        {pinnedNotes.length > 0 && <h3>Other Notes</h3>}
-                        {otherNotes.length > 0 &&
-                            otherNotes.map((note) => (
-                                <NotesCard
-                                    key={note.id}
-                                    id={note.id}
-                                    title={note.title}
-                                    text={note.text}
-                                    isPinned={note.isPinned}
-                                />
-                            ))}
+                        <div className="grid-container">
+                            {pinnedNotes.length > 0 &&
+                                pinnedNotes.map((note) => (
+                                    <NotesCard
+                                        key={note.id}
+                                        id={note.id}
+                                        title={note.title}
+                                        text={note.text}
+                                        isPinned={note.isPinned}
+                                    />
+                                ))}
+                        </div>
+                        {otherNotes.length > 0 && <h3>Other Notes</h3>}
+                        <div className="grid-container">
+                            {otherNotes.length > 0 &&
+                                otherNotes.map((note) => (
+                                    <NotesCard
+                                        key={note.id}
+                                        id={note.id}
+                                        title={note.title}
+                                        text={note.text}
+                                        isPinned={note.isPinned}
+                                    />
+                                ))}
+                        </div>
                     </div>
                 </div>
             </div>

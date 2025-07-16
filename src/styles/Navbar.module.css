@@ -5,4 +5,5 @@
 .Typography {
     font-family: "Quicksand", sans-serif !important;
     color: var(--color-bg) !important;
+    margin-left: 12px !important;
 }

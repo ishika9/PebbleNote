@@ -24,16 +24,7 @@ export default function Navbar({ open, handleDrawerToggle }) {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        <img
-                            src={logo}
-                            alt="logo"
-                            style={{
-                                width: "40px",
-                                height: "auto",
-                                margin: "0 8px 0 8px",
-                            }}
-                        />
-                        {/* <MenuIcon /> */}
+                        <MenuIcon />
                     </IconButton>
                     <Typography
                         variant="h3"
@@ -42,6 +33,15 @@ export default function Navbar({ open, handleDrawerToggle }) {
                     >
                         pebblenote
                     </Typography>
+                    <img
+                        src={logo}
+                        alt="logo"
+                        style={{
+                            width: "40px",
+                            height: "auto",
+                            margin: "0 8px 0 8px",
+                        }}
+                    />
                 </Toolbar>
             </AppBar>
         </Box>

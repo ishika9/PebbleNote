@@ -109,6 +109,12 @@
     background-color: var(--color-highlight);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
