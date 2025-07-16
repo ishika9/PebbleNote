@@ -22,7 +22,7 @@ const items = [
     { text: "Home", icon: <HomeIcon />, path: "/" },
     { text: "Archive", icon: <ArchiveIcon />, path: "/archive" },
     { text: "Important", icon: <StarIcon />, path: "/important" },
-    { text: "Bin", icon: <TrashIcon />, path: "/bin" },
+    // { text: "Bin", icon: <TrashIcon />, path: "/bin" },
 ];
 
 export default function Sidebar({ open }) {

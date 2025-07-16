@@ -6,7 +6,7 @@ import "../styles/Home.css";
 import { NotesCard } from "../components/NotesCard";
 import { useNotes } from "../context/notes-context";
 
-export const Archive = () => {
+export const Important = () => {
     const [open, setOpen] = useState(false);
 
     const handleDrawerToggle = () => {
@@ -16,7 +16,7 @@ export const Archive = () => {
     const navbarHeight = 78;
     const { state, dispatch } = useNotes();
 
-    const archivedNotes = state.archive;
+    const ImportantNotes = state.important;
 
     return (
         <>
@@ -54,18 +54,17 @@ export const Archive = () => {
                             overflowY: "auto",
                         }}
                     >
-                        <h3>Archive</h3>
-                        {archivedNotes.length > 0
-                            ? archivedNotes.map((note) => (
+                        <h3>Important</h3>
+                        {ImportantNotes.length > 0
+                            ? ImportantNotes.map((note) => (
                                   <NotesCard
                                       key={note.id}
                                       id={note.id}
                                       title={note.title}
                                       text={note.text}
-                                      // isPinned={note.isPinned}
                                   />
                               ))
-                            : "You don't have any archived notes"}
+                            : "You don't have any notes marked important"}
                     </div>
                 </div>
             </div>
